@@ -1,0 +1,135 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"7 util.c
+[; ;util.c: 7: void Delay(ulong delay_count_max)
+[v _Delay `(v ~T0 @X0 1 ef1`ul ]
+"8
+[; ;util.c: 8: {
+{
+[e :U _Delay ]
+"7
+[; ;util.c: 7: void Delay(ulong delay_count_max)
+[v _delay_count_max `ul ~T0 @X0 1 r1 ]
+"8
+[; ;util.c: 8: {
+[f ]
+"9
+[; ;util.c: 9:     ulong delay_count = 0;
+[v _delay_count `ul ~T0 @X0 1 a ]
+[e = _delay_count -> -> -> 0 `i `l `ul ]
+"11
+[; ;util.c: 11:     for (delay_count = 0; delay_count < delay_count_max; delay_count++)
+{
+[e = _delay_count -> -> -> 0 `i `l `ul ]
+[e $U 14  ]
+[e :U 11 ]
+"12
+[; ;util.c: 12:     {
+{
+"14
+[; ;util.c: 14:     }
+}
+[e ++ _delay_count -> -> -> 1 `i `l `ul ]
+[e :U 14 ]
+[e $ < _delay_count _delay_count_max 11  ]
+[e :U 12 ]
+}
+"16
+[; ;util.c: 16: }
+[e :UE 10 ]
+}
+"18
+[; ;util.c: 18: uchar calculateCRC8(uchar * inData, uchar dataLen)
+[v _calculateCRC8 `(uc ~T0 @X0 1 ef2`*uc`uc ]
+"19
+[; ;util.c: 19: {
+{
+[e :U _calculateCRC8 ]
+"18
+[; ;util.c: 18: uchar calculateCRC8(uchar * inData, uchar dataLen)
+[v _inData `*uc ~T0 @X0 1 r1 ]
+[v _dataLen `uc ~T0 @X0 1 r2 ]
+"19
+[; ;util.c: 19: {
+[f ]
+"20
+[; ;util.c: 20:     uchar i = 0, j = 0, crc = 0;
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[v _crc `uc ~T0 @X0 1 a ]
+[e = _crc -> -> 0 `i `uc ]
+"22
+[; ;util.c: 22:     for (j = 0; j < dataLen; j++)
+{
+[e = _j -> -> 0 `i `uc ]
+[e $U 19  ]
+[e :U 16 ]
+"23
+[; ;util.c: 23:     {
+{
+"24
+[; ;util.c: 24:         crc ^= *inData++;
+[e =^ _crc -> *U ++ _inData * -> -> 1 `i `x -> -> # *U _inData `i `x `uc ]
+"25
+[; ;util.c: 25:         for (i = 0; i < 8; i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 20  ]
+[e $U 21  ]
+[e :U 20 ]
+"26
+[; ;util.c: 26:         {
+{
+"27
+[; ;util.c: 27:             if ((crc & 0x80) != 0)
+[e $ ! != & -> _crc `i -> 128 `i -> 0 `i 23  ]
+"28
+[; ;util.c: 28:             {
+{
+"29
+[; ;util.c: 29:                 crc <<= 1;
+[e =<< _crc -> -> 1 `i `uc ]
+"30
+[; ;util.c: 30:                 crc ^= 0x07;
+[e =^ _crc -> -> 7 `i `uc ]
+"31
+[; ;util.c: 31:             }
+}
+[e $U 24  ]
+"32
+[; ;util.c: 32:             else
+[e :U 23 ]
+"33
+[; ;util.c: 33:             {
+{
+"34
+[; ;util.c: 34:                 crc <<= 1;
+[e =<< _crc -> -> 1 `i `uc ]
+"35
+[; ;util.c: 35:             }
+}
+[e :U 24 ]
+"36
+[; ;util.c: 36:         }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 20  ]
+[e :U 21 ]
+}
+"37
+[; ;util.c: 37:     }
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e :U 19 ]
+[e $ < -> _j `i -> _dataLen `i 16  ]
+[e :U 17 ]
+}
+"38
+[; ;util.c: 38:     return crc;
+[e ) _crc ]
+[e $UE 15  ]
+"39
+[; ;util.c: 39: }
+[e :UE 15 ]
+}
