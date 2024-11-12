@@ -47,11 +47,13 @@
   * @retval None
   */
 
-//#define UART_RX_BUF_SIZE            128
+//
 //volatile uint8_t uart2RxCount;
 //volatile uint8_t uart2RxBufferHead = 0;
 //uint8_t uart2TxBuffer[64];
-//uint8_t uart2RxBuffer[UART_RX_BUF_SIZE];
+extern uint8_t uartRxBuffer[UART_RX_BUF_SIZE];
+extern volatile uint8_t uartRxBufferHead = 0;
+uint8_t  RX_Count = 0x00;
 //
 //void UART2RxCompleteHandler(void) 
 //{
@@ -239,18 +241,25 @@ uint32_t GetIntegerInput(int32_t * num)
   */
 uint32_t SerialKeyPressed(uint8_t *key)
 {
-    uint8_t  RX_Count = 0x00;    
-    RX_Count=readUARTbuffer(key);
+    if(uartRxBufferHead < RX_Count)
+    {
+       *key = uartRxBuffer[uartRxBufferHead];
+       uartRxBufferHead++;
+       return 1;
+    }
+    clearUARTbuffer();
+    RX_Count=readUARTbuffer(uartRxBuffer);
 
     if(0 != RX_Count)
     {
+        *key = uartRxBuffer[uartRxBufferHead];
+        uartRxBufferHead++;
         return 1;
     }
     else
     {
         return 0;
     }
-
 }
 
 /**
@@ -261,34 +270,25 @@ uint32_t SerialKeyPressed(uint8_t *key)
 uint8_t GetKey(void)
 {
     uint8_t key = 0;
-
-    /* Waiting for user input */
-    uint8_t uartRxData[16];
-    
-    uint8_t  RX_Count = 0x00;
     uint32_t counter=0;
+    uint32_t ret = 0;
     
     Timer1_Write(0xFFCE);
     do {
     
-        RX_Count=readUARTbuffer(uartRxData);
+        //RX_Count=readUARTbuffer(uartRxBuffer);
+        ret = SerialKeyPressed(&key);
         Timer1_Start();
         while(!Timer1_HasOverflowOccured());                                    /*!< wait for timer(100us) to Expire*/
         Timer1_Stop();
         counter++;
     
-    } while( RX_Count<1 && counter<500000);
+    } while( ret == 0 && counter < 500000);
     
     if(counter >= 500000)
     {
         return 0xFF;
     }
-    
-    if(RX_Count > 0)
-    {
-        key = uartRxData[0];
-    }
-
     return key;
 
 }

@@ -35,7 +35,7 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+#define UART_RX_BUF_SIZE     128
 #define BOOT_MOTOR
 
 #define verNum "0.3"
@@ -48,7 +48,7 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
-
+void clearUARTbuffer(void);
 //Fetch the entire contents of the UART buffer at the time
 uint8_t readUARTbuffer(uint8_t* RdBuffer);
 

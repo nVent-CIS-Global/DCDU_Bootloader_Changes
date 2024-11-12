@@ -284,7 +284,7 @@
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="/home/suyadav/Downloads/ACDM.X/debug/default/ACDM_ptg"/>
+                  value="C:/Users/e2019523/MPLABXProjects/ACDM_New/ACDM.X/debug/default/ACDM_ptg"/>
         <property key="programmerToGoImageName" value="ACDM_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

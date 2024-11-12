@@ -886,7 +886,7 @@ int main(void)
 //    SERCOM0_USART_WriteCallbackRegister(usartWriteEventHandler, (uintptr_t) NULL);
 
     Main_Menu();
-       
+    printf("\n\rLoading Bootloader Version 2");  
     while(1)
     {
         //printf("\r\nSlot Address: %x",slotAddress);

@@ -36,17 +36,17 @@ typedef  void (*pFunction)(void);
 /* Constants used by Serial Command Line Mode */
 #define CMD_STRING_SIZE                     128
 
-#define ApplicationAddress                  0x0000//0x8004000
+#define ApplicationAddress                  0x10000//0x8004000
 #define VersionAddress                      0x6000
 
 
  #define PAGE_SIZE                          64U//(0x800)    /* 1 Kbyte */
- #define xFLASH_SIZE                        (0x10000)  /* 128 KBytes */
+ #define xFLASH_SIZE                        (0x20000)  /* 128 KBytes */
 
 /* Compute the FLASH upload image size */  
 #define FLASH_IMAGE_SIZE                    (uint32_t) (xFLASH_SIZE - (ApplicationAddress))
 
-#define APP_START_ADDRESS                   0x0000
+#define APP_START_ADDRESS                   0x10000
 #define MAGIC_NUM_ADDR                      (xFLASH_SIZE - 4)
 #define MAGIC_NUM                           0xDEADBEEF
 #define Bootloader_version                  2                                   /*indicates firmware version*/

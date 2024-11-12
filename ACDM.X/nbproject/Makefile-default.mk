@@ -19,7 +19,7 @@ endif
 endif
 
 # Environment
-MKDIR=mkdir -p
+MKDIR=gnumkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 
@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/pwm/src/pwm1_16bit.c mcc_generated_files/pwm/src/pwm4_16bit.c mcc_generated_files/spi/src/spi1.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/timer/src/tmr0.c mcc_generated_files/timer/src/tmr1.c mcc_generated_files/uart/src/uart3.c mcc_generated_files/uart/src/uart2.c main.c boot.c common.c download.c util.c ymodem.c mcc_generated_files/examples/UART_Example/uart_example.c mcc_generated_files/nvm/src/nvm.c
+SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/examples/UART_Example/uart_example.c mcc_generated_files/nvm/src/nvm.c mcc_generated_files/pwm/src/pwm1_16bit.c mcc_generated_files/pwm/src/pwm4_16bit.c mcc_generated_files/spi/src/spi1.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/timer/src/tmr0.c mcc_generated_files/timer/src/tmr1.c mcc_generated_files/uart/src/uart3.c mcc_generated_files/uart/src/uart2.c main.c boot.c common.c download.c util.c ymodem.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm4_16bit.p1 ${OBJECTDIR}/mcc_generated_files/spi/src/spi1.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/uart3.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/uart2.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/boot.p1 ${OBJECTDIR}/common.p1 ${OBJECTDIR}/download.p1 ${OBJECTDIR}/util.p1 ${OBJECTDIR}/ymodem.p1 ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1.d ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm4_16bit.p1.d ${OBJECTDIR}/mcc_generated_files/spi/src/spi1.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr0.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1.d ${OBJECTDIR}/mcc_generated_files/uart/src/uart3.p1.d ${OBJECTDIR}/mcc_generated_files/uart/src/uart2.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/boot.p1.d ${OBJECTDIR}/common.p1.d ${OBJECTDIR}/download.p1.d ${OBJECTDIR}/util.p1.d ${OBJECTDIR}/ymodem.p1.d ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm4_16bit.p1 ${OBJECTDIR}/mcc_generated_files/spi/src/spi1.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/uart3.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/uart2.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/boot.p1 ${OBJECTDIR}/common.p1 ${OBJECTDIR}/download.p1 ${OBJECTDIR}/util.p1 ${OBJECTDIR}/ymodem.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1.d ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm4_16bit.p1.d ${OBJECTDIR}/mcc_generated_files/spi/src/spi1.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr0.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1.d ${OBJECTDIR}/mcc_generated_files/uart/src/uart3.p1.d ${OBJECTDIR}/mcc_generated_files/uart/src/uart2.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/boot.p1.d ${OBJECTDIR}/common.p1.d ${OBJECTDIR}/download.p1.d ${OBJECTDIR}/util.p1.d ${OBJECTDIR}/ymodem.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm4_16bit.p1 ${OBJECTDIR}/mcc_generated_files/spi/src/spi1.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/uart3.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/uart2.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/boot.p1 ${OBJECTDIR}/common.p1 ${OBJECTDIR}/download.p1 ${OBJECTDIR}/util.p1 ${OBJECTDIR}/ymodem.p1 ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1
+OBJECTFILES=${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm4_16bit.p1 ${OBJECTDIR}/mcc_generated_files/spi/src/spi1.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/uart3.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/uart2.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/boot.p1 ${OBJECTDIR}/common.p1 ${OBJECTDIR}/download.p1 ${OBJECTDIR}/util.p1 ${OBJECTDIR}/ymodem.p1
 
 # Source Files
-SOURCEFILES=mcc_generated_files/pwm/src/pwm1_16bit.c mcc_generated_files/pwm/src/pwm4_16bit.c mcc_generated_files/spi/src/spi1.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/timer/src/tmr0.c mcc_generated_files/timer/src/tmr1.c mcc_generated_files/uart/src/uart3.c mcc_generated_files/uart/src/uart2.c main.c boot.c common.c download.c util.c ymodem.c mcc_generated_files/examples/UART_Example/uart_example.c mcc_generated_files/nvm/src/nvm.c
+SOURCEFILES=mcc_generated_files/examples/UART_Example/uart_example.c mcc_generated_files/nvm/src/nvm.c mcc_generated_files/pwm/src/pwm1_16bit.c mcc_generated_files/pwm/src/pwm4_16bit.c mcc_generated_files/spi/src/spi1.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/timer/src/tmr0.c mcc_generated_files/timer/src/tmr1.c mcc_generated_files/uart/src/uart3.c mcc_generated_files/uart/src/uart2.c main.c boot.c common.c download.c util.c ymodem.c
 
 
 
@@ -88,6 +88,22 @@ MP_PROCESSOR_OPTION=18F57Q84
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1: mcc_generated_files/examples/UART_Example/uart_example.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/examples/UART_Example" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit5   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -I"config/default" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 mcc_generated_files/examples/UART_Example/uart_example.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.d ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1: mcc_generated_files/nvm/src/nvm.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/nvm/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit5   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -I"config/default" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 mcc_generated_files/nvm/src/nvm.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.d ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1: mcc_generated_files/pwm/src/pwm1_16bit.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1.d 
@@ -232,11 +248,12 @@ ${OBJECTDIR}/ymodem.p1: ymodem.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/ymodem.d ${OBJECTDIR}/ymodem.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ymodem.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+else
 ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1: mcc_generated_files/examples/UART_Example/uart_example.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/examples/UART_Example" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit5   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -I"config/default" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 mcc_generated_files/examples/UART_Example/uart_example.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -I"config/default" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 mcc_generated_files/examples/UART_Example/uart_example.c 
 	@-${MV} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.d ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -244,11 +261,10 @@ ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1: mcc_generated_files/nvm/src/nvm
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/nvm/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit5   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -I"config/default" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 mcc_generated_files/nvm/src/nvm.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -I"config/default" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 mcc_generated_files/nvm/src/nvm.c 
 	@-${MV} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.d ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-else
 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1: mcc_generated_files/pwm/src/pwm1_16bit.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm1_16bit.p1.d 
@@ -392,22 +408,6 @@ ${OBJECTDIR}/ymodem.p1: ymodem.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -I"config/default" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/ymodem.p1 ymodem.c 
 	@-${MV} ${OBJECTDIR}/ymodem.d ${OBJECTDIR}/ymodem.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ymodem.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1: mcc_generated_files/examples/UART_Example/uart_example.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/examples/UART_Example" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -I"config/default" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1 mcc_generated_files/examples/UART_Example/uart_example.c 
-	@-${MV} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.d ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/examples/UART_Example/uart_example.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1: mcc_generated_files/nvm/src/nvm.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/nvm/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -I"config/default" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 mcc_generated_files/nvm/src/nvm.c 
-	@-${MV} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.d ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
